@@ -101,8 +101,9 @@ namespace ProyectoCuentasFinal_U1
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(107, 51);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Balance Cuentas";
+            this.button4.Text = "Balance de Saldos";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -115,6 +116,7 @@ namespace ProyectoCuentasFinal_U1
             this.button1.TabIndex = 5;
             this.button1.Text = "Balance General";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMenuInicial
             // 

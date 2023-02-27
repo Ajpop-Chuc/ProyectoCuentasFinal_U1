@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capital.cs" />
     <Compile Include="ClassCuentasAC.cs" />
     <Compile Include="ClassCuentasANC.cs" />
     <Compile Include="ClassCuentasPC.cs" />
@@ -94,11 +95,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <EmbeddedResource Include="FormDiario.resx">
       <DependentUpon>FormDiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMayor.resx">
       <DependentUpon>FormMayor.cs</DependentUpon>
+
+    <EmbeddedResource Include="FormBalanceGeneral.resx">
+      <DependentUpon>FormBalanceGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBalanceSaldos.resx">
+      <DependentUpon>FormBalanceSaldos.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuInicial.resx">
       <DependentUpon>FormMenuInicial.cs</DependentUpon>

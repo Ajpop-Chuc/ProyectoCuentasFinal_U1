@@ -28,5 +28,19 @@ namespace ProyectoCuentasFinal_U1
             Form openform = new FormNuevoMovimiento();
             openform.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form openform = new FormBalanceSaldos();
+            openform.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form openform = new FormBalanceGeneral();
+            openform.Show();
+
+          
+        }
     }
 }
