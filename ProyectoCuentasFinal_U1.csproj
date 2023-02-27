@@ -53,6 +53,7 @@
     <Compile Include="ClassCuentasANC.cs" />
     <Compile Include="ClassCuentasPC.cs" />
     <Compile Include="ClassCuentasPNC.cs" />
+    <Compile Include="ClassLibroMayor.cs" />
     <Compile Include="ClassMovimientos.cs" />
     <Compile Include="ClassMovimientosAux.cs" />
     <Compile Include="FormBalanceGeneral.cs">
@@ -93,6 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDiario.resx">
+      <DependentUpon>FormDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMayor.resx">
+      <DependentUpon>FormMayor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuInicial.resx">
       <DependentUpon>FormMenuInicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +115,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CuentasAC.Json" />
+    <None Include="CuentasANC.Json" />
+    <None Include="CuentasPC.Json" />
+    <None Include="CuentasPNC.Json" />
+    <None Include="listaLibroMayor.Json" />
+    <None Include="listaTodosLosMovimientos.Json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
