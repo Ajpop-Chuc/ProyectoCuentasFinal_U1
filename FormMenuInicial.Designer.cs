@@ -46,9 +46,10 @@ namespace ProyectoCuentasFinal_U1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(54, 37);
+            this.label1.Location = new System.Drawing.Point(40, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 72);
+            this.label1.Size = new System.Drawing.Size(228, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "SISTEMA GESTOR\r\n    DE CUENTAS\r\n";
             // 
@@ -56,10 +57,10 @@ namespace ProyectoCuentasFinal_U1
             // 
             this.btnIngresarMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnIngresarMovimiento.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold);
-            this.btnIngresarMovimiento.Location = new System.Drawing.Point(46, 127);
-            this.btnIngresarMovimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngresarMovimiento.Location = new System.Drawing.Point(34, 103);
+            this.btnIngresarMovimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngresarMovimiento.Name = "btnIngresarMovimiento";
-            this.btnIngresarMovimiento.Size = new System.Drawing.Size(309, 67);
+            this.btnIngresarMovimiento.Size = new System.Drawing.Size(232, 54);
             this.btnIngresarMovimiento.TabIndex = 1;
             this.btnIngresarMovimiento.Text = "Nuevo Movimiento";
             this.btnIngresarMovimiento.UseVisualStyleBackColor = false;
@@ -69,10 +70,10 @@ namespace ProyectoCuentasFinal_U1
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(46, 198);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(34, 161);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 63);
+            this.button2.Size = new System.Drawing.Size(107, 51);
             this.button2.TabIndex = 2;
             this.button2.Text = "Libro Diario";
             this.button2.UseVisualStyleBackColor = false;
@@ -81,10 +82,10 @@ namespace ProyectoCuentasFinal_U1
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(212, 198);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(159, 161);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 63);
+            this.button3.Size = new System.Drawing.Size(107, 51);
             this.button3.TabIndex = 3;
             this.button3.Text = "Libro Mayor";
             this.button3.UseVisualStyleBackColor = false;
@@ -93,40 +94,42 @@ namespace ProyectoCuentasFinal_U1
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(46, 279);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(34, 227);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 63);
+            this.button4.Size = new System.Drawing.Size(107, 51);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Balance Cuentas";
+            this.button4.Text = "Balance de Saldos";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(212, 279);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(159, 227);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 63);
+            this.button1.Size = new System.Drawing.Size(107, 51);
             this.button1.TabIndex = 5;
             this.button1.Text = "Balance General";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMenuInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(635, 385);
+            this.ClientSize = new System.Drawing.Size(476, 313);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnIngresarMovimiento);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMenuInicial";
             this.Text = "Menu Inicial";
             this.Load += new System.EventHandler(this.FormMenuInicial_Load);
