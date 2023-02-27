@@ -70,6 +70,7 @@ namespace ProyectoCuentasFinal_U1
 
         private void BtnGuardarDebe_Click(object sender, EventArgs e)
         {
+
             string cuentaSelect = CBoxInDebe.Text;
             ClassCuentasAC cuentaUsadaAC = ClassCuentasAC.listaActivosCorrientes.Find(x => x.nombre == cuentaSelect);
             if (cuentaUsadaAC != null)
@@ -96,6 +97,51 @@ namespace ProyectoCuentasFinal_U1
             cuentasNuevoMovimiento.Debe = Convert.ToDouble(TBoxInMontoDebe.Text.ToString());
             guardarNuevoMovimiento.listaCuentasInvolucradas.Add(cuentasNuevoMovimiento);
 
+            //llamada de metodos guardardebe
+            GuardarLibroMayorDebe();
+
+        }
+
+        private void GuardarLibroMayorDebe()
+        {
+            ClassLibroMayor datosdebe; 
+            datosdebe = ClassLibroMayor.listalibromayor.Find(x=> x.nombre==CBoxInDebe.SelectedItem.ToString());
+            
+            if (datosdebe != null)
+            {
+                datosdebe.ListaDebe.Add(Convert.ToDouble(TBoxInMontoDebe.Text.ToString()));
+                
+            }
+            else
+            {
+                datosdebe = new ClassLibroMayor();
+                datosdebe.nombre = CBoxInDebe.SelectedItem.ToString();
+                datosdebe.ListaDebe.Add(Convert.ToDouble(TBoxInMontoDebe.Text.ToString()));
+
+                ClassLibroMayor.listalibromayor.Add(datosdebe);
+                
+            }            
+        }
+
+        private void GuardarLibroMayorHaber()
+        {
+            ClassLibroMayor datoshaber;
+            datoshaber = ClassLibroMayor.listalibromayor.Find(x => x.nombre == CBoxInHaber.SelectedItem.ToString());
+
+            if (datoshaber != null)
+            {
+                datoshaber.ListaHaber.Add(Convert.ToDouble(TBoxInMontoHaber.Text.ToString()));
+
+            }
+            else
+            {
+                datoshaber = new ClassLibroMayor();
+                datoshaber.nombre = CBoxInHaber.SelectedItem.ToString();
+                datoshaber.ListaDebe.Add(Convert.ToDouble(TBoxInMontoHaber.Text.ToString()));
+
+                ClassLibroMayor.listalibromayor.Add(datoshaber);
+                    
+            }
         }
 
         private void BtnGuardarHaber_Click(object sender, EventArgs e)
@@ -126,7 +172,8 @@ namespace ProyectoCuentasFinal_U1
             cuentasNuevoMovimiento.Haber = Convert.ToDouble(TBoxInMontoHaber.Text.ToString());
             guardarNuevoMovimiento.listaCuentasInvolucradas.Add(cuentasNuevoMovimiento);
 
-
+            //llamada de metodos guardarhaber
+            GuardarLibroMayorHaber();
 
         }
 
@@ -138,6 +185,9 @@ namespace ProyectoCuentasFinal_U1
             TBoxInMontoHaber.Enabled = false;
             CBoxInDebe.Enabled = false;
             CBoxInHaber.Enabled = false;
+
+            //para que guarde hasta que termine la partida
+            ClassLibroMayor.guardarenJson();
         }
 
         private void BtnNuevaCuenta_Click(object sender, EventArgs e)
